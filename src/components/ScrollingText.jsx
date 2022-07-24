@@ -4,16 +4,16 @@ const ScrollingText = () => {
     <div className="select-none scrolling-text ">
       <div className="text-wrapper pt-[.5rem]">
         <p className='scrolling-text-p'>
-          WE BUILD THINGS FOR OURSELVES AND FOR OUR PARTNERS<span className="mr-[1rem] ml-[1rem]">•</span> 
-          WE BUILD THINGS FOR OURSELVES AND FOR OUR PARTNERS<span className="mr-[1rem] ml-[1rem]">•</span> 
+          FORTNITE • ROBLOX • MINECRAFT • SANDBOX • DECENTRALAND • HORIZON • LIGHTSHIP • REC ROOM • SOLANA • POLYGON • FLOW • IMMUTABLE X • AVALANCHE<span className="mr-[1rem] ml-[1rem]">•</span> 
+          FORTNITE • ROBLOX • MINECRAFT • SANDBOX • DECENTRALAND • HORIZON • LIGHTSHIP • REC ROOM • SOLANA • POLYGON • FLOW • IMMUTABLE X • AVALANCHE<span className="mr-[1rem] ml-[1rem]">•</span> 
         </p>
-        <p  className='scrolling-text-p'>
-          WE BUILD THINGS FOR OURSELVES AND FOR OUR PARTNERS<span className="mr-[1rem] ml-[1rem]">•</span> 
-          WE BUILD THINGS FOR OURSELVES AND FOR OUR PARTNERS<span className="mr-[1rem] ml-[1rem]">•</span> 
+        <p className='scrolling-text-p'>
+        FORTNITE • ROBLOX • MINECRAFT • SANDBOX • DECENTRALAND • HORIZON • LIGHTSHIP • REC ROOM • SOLANA • POLYGON • FLOW • IMMUTABLE X • AVALANCHE<span className="mr-[1rem] ml-[1rem]">•</span> 
+        FORTNITE • ROBLOX • MINECRAFT • SANDBOX • DECENTRALAND • HORIZON • LIGHTSHIP • REC ROOM • SOLANA • POLYGON • FLOW • IMMUTABLE X • AVALANCHE<span className="mr-[1rem] ml-[1rem]">•</span> 
         </p>
-        <p  className='scrolling-text-p'>
-          WE BUILD THINGS FOR OURSELVES AND FOR OUR PARTNERS<span className="mr-[1rem] ml-[1rem]">•</span> 
-          WE BUILD THINGS FOR OURSELVES AND FOR OUR PARTNERS<span className="mr-[1rem] ml-[1rem]">•</span> 
+        <p className='scrolling-text-p'>
+        FORTNITE • ROBLOX • MINECRAFT • SANDBOX • DECENTRALAND • HORIZON • LIGHTSHIP • REC ROOM • SOLANA • POLYGON • FLOW • IMMUTABLE X • AVALANCHE<span className="mr-[1rem] ml-[1rem]">•</span> 
+        FORTNITE • ROBLOX • MINECRAFT • SANDBOX • DECENTRALAND • HORIZON • LIGHTSHIP • REC ROOM • SOLANA • POLYGON • FLOW • IMMUTABLE X • AVALANCHE<span className="mr-[1rem] ml-[1rem]">•</span> 
         </p>
       </div>
     </div>

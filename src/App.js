@@ -175,7 +175,7 @@ function App() {
         <Landing />
         <ScrollingPage />
         <Metaverse />
-        <TextBanner />
+        {/* <TextBanner /> */}
         <Projects />
         <Contact />
       </div>
