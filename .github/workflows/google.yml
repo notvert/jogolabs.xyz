@@ -28,8 +28,15 @@ jobs:
       - name: Install tools
         run: |
           sudo apt-get install -y jq
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'npm'
+      - run: npm install
+      - run: npm build
       - name: sync
         if: ${{ github.event.inputs.trigger_sync || env.trigger_sync == 'true' }}
         run: |
           # download preprod bucket and copy over to production bucket
-          gcloud alpha --quiet storage cp -r gs://jogolabs.xyz/ .
+          gcloud alpha --quiet storage cp -r ./build/* gs://jogolabs.xyz/tmp
