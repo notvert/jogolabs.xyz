@@ -30,7 +30,6 @@ jobs:
       - run: npm install
       - run: CI="" npm run build
       - name: sync
-        if: ${{ github.event.inputs.trigger_sync || env.trigger_sync == 'true' }}
         run: |
           # download preprod bucket and copy over to production bucket
           gcloud alpha --quiet storage rm -r gs://jogolabs.xyz/*
