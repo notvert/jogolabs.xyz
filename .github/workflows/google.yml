@@ -1,15 +1,9 @@
-name: Sync Preprod Repository with GCS Prod Bucket 
+name: Deploy Website To GCS
 
 on:
-  schedule:
-    - cron: '0 */12 * * *' # every 12 hours
-  workflow_dispatch:
-    inputs:
-      trigger_sync:
-        description: 'Whether to manually trigger a sync, otherwise only syncs pre-prod to prod with a 2 day delay'
-        required: false
-        default: false
-        type: boolean
+  push:
+    branches:    
+      - 'master'
 
 jobs:
   sync:
@@ -17,7 +11,7 @@ jobs:
     permissions:
       id-token: 'write'
     steps:
-
+      - uses: actions/checkout@v3
       - id: 'auth'
         uses: 'google-github-actions/auth@v0'
         with:
@@ -34,9 +28,10 @@ jobs:
           node-version: 16.x
           cache: 'npm'
       - run: npm install
-      - run: npm build
+      - run: CI="" npm run build
       - name: sync
         if: ${{ github.event.inputs.trigger_sync || env.trigger_sync == 'true' }}
         run: |
           # download preprod bucket and copy over to production bucket
-          gcloud alpha --quiet storage cp -r ./build/* gs://jogolabs.xyz/tmp
+          gcloud alpha --quiet storage rm -r gs://jogolabs.xyz/*
+          gcloud alpha --quiet storage cp -r ./build/* gs://jogolabs.xyz/
