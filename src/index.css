@@ -1,0 +1,380 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #1A1A1A;
+  font-weight: bold;
+  color: #DAE4DB;
+  cursor: url('./images/crosshair.gif') 16 16, auto;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#transitionBackground{
+  z-index: 900;
+}
+
+.landingBG{
+  background-size: 100% 90%;
+}
+
+.titleFont{
+  font-family: 'Syne', sans-serif;
+}
+
+.standardFont{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.imageClass{
+  height: inherit;
+  overflow: hidden;
+  object-fit: contain;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#redDot{
+  pointer-events: fill;
+}
+
+#contactBTN:hover{
+  cursor: crosshair;
+}
+
+/* Scrolling text section ------------------------------------------------------------------------------------*/
+.rainbowText{
+  display: initial;
+  background-image: linear-gradient(to left, #72cad2, #5b99c5, #6d688a, #2e7b8f, #9d9e90, #98d3d7, #9774a0, #cba09b, #f5a8b2);
+  background-size: cover;
+  background-size: 1500px 1000px;
+  background-position: top left;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.scrolling-text {
+  height: 50px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.text-wrapper {
+  height: 150px;
+  width: 10000px;
+  position: absolute;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  animation: moveSlideshow 15s linear infinite;
+}
+
+.scrolling-text-p {
+    display: initial;
+    background-image: linear-gradient(to left, #72cad2, #5b99c5, #6d688a, #2e7b8f, #9d9e90, #98d3d7, #9774a0, #cba09b, #f5a8b2);
+    background-size: cover;
+    background-size: 1000px 2000px;
+    background-position: top left;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-2206px);
+  }
+}
+
+
+/* Metaverse Veritcle text specific styling ----------------------------------------------------------------- */
+#metaVerticleText{
+  position: absolute;
+  font-size: 1rem;
+  width: 58.3vh;
+  transform: rotate(90deg);
+  font-weight: medium;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid white;
+  margin-bottom: 6.7rem;
+}
+
+#metaVerticleTextTest{
+  font-size: 1rem;
+  font-weight: medium;
+  margin: 0 0 10px 0;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+  left: 2.2rem;
+  width: 55vh;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+.verticleText{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+
+/* Horizontal Page or ScrollingPage.jsx --------------------------------------------*/
+section.horizontal {
+  overflow: hidden;
+}
+
+#main-scrollbar{
+  width: auto;
+  height: 100vh;
+  overflow: auto;
+  margin: 0;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section.horizontal {
+  overflow-x: hidden;
+}
+
+section.horizontal .pin-wrap,
+section.horizontal .animation-wrap {
+    display: flex;
+    position: relative;
+    z-index: 1;  
+    height: 100vh;
+}
+
+section.horizontal .item {
+    position: relative;
+    font-size: 8rem;
+    flex: 0 0 400px;
+    height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 1.7;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Metaverse Rotating text Section ------------------------------------------------ */
+.metaText {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: auto;
+  overflow: hidden;
+  max-height: 9rem;
+  color: #dae4db;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height:  9rem;
+  letter-spacing: 3px;
+}
+
+.word {
+  grid-column: 2;
+  grid-row: auto;
+  margin-left: auto;
+  font-weight: 600;
+  display: inline-block;
+  /* padding-top: .5rem; */
+}
+
+.word span {
+  display: inline-block;
+}
+
+.text-row {
+  margin-top: 120px;
+  padding-bottom: 100px;
+}
+
+.metaverse span:nth-child(1) {
+  animation: metaverse 6s ease-in-out both 0.05s infinite;
+}
+.metaverse span:nth-child(2) {
+  animation: metaverse 6s ease-in-out both 0.1s infinite;
+}
+span:nth-child(3) {
+  animation: metaverse 6s ease-in-out both 0.15s infinite;
+}
+.metaverse span:nth-child(4) {
+  animation: metaverse 6s ease-in-out both 0.2s infinite;
+}
+.metaverse span:nth-child(5) {
+  animation: metaverse 6s ease-in-out both 0.25s infinite;
+}
+.metaverse span:nth-child(6) {
+  animation: metaverse 6s ease-in-out both 0.3s infinite;
+}
+.metaverse span:nth-child(7) {
+  animation: metaverse 6s ease-in-out both 0.35s infinite;
+}
+.metaverse span:nth-child(8) {
+  animation: metaverse 6s ease-in-out both 0.4s infinite;
+}
+.metaverse span:nth-child(9) {
+  animation: metaverse 6s ease-in-out both 0.45s infinite;
+}
+
+.web3 span:nth-child(1) {
+  animation: web3 6s ease-in-out both 0.05s infinite;
+}
+
+.web3 span:nth-child(2) {
+  animation: web3 6s ease-in-out both 0.1s infinite;
+}
+
+.web3 span:nth-child(3) {
+  animation: web3 6s ease-in-out both 0.15s infinite;
+}
+.web3 span:nth-child(4) {
+  animation: web3 6s ease-in-out both 0.2s infinite;
+}
+
+.gaming span:nth-child(1) {
+  animation: gaming 6s ease-in-out both 0.05s infinite;
+}
+
+.gaming  span:nth-child(2) {
+  animation: gaming 6s ease-in-out both 0.1s infinite;
+}
+
+.gaming span:nth-child(3) {
+  animation: gaming 6s ease-in-out both 0.15s infinite;
+}
+
+.gaming span:nth-child(4) {
+  animation: gaming 6s ease-in-out both 0.2s infinite;
+}
+
+.gaming span:nth-child(5) {
+  animation: gaming 6s ease-in-out both 0.25s infinite;
+}
+.gaming span:nth-child(6) {
+  animation: gaming 6s ease-in-out both 0.3s infinite;
+}
+
+@keyframes metaverse {
+  0% {
+    transform: translateY(0);
+  }
+  26.6666666667% {
+    transform: translateY(0);
+  }
+  33.3333333333% {
+    transform: translateY(-100%);
+  }
+  60% {
+    transform: translateY(-100%);
+  }
+  66.6666666667% {
+    transform: translateY(-200%);
+  }
+  93.3333333333% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+  126.6666666667% {
+    transform: translateY(-300%);
+  }
+  133.3333333333% {
+    transform: translateY(-400%);
+  }
+  160% {
+    transform: translateY(-400%);
+    opacity: 1;
+  }
+  166.6666666667% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+}
+@keyframes web3 {
+  0% {
+    transform: translateY(0);
+  }
+  33.3333333333% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-100%);
+  }
+  66.6666666667% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  73.3333333333% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  73.3343333333% {
+    transform: translateY(0);
+  }
+  73.3363333333% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes gaming {
+  0% {
+    transform: translateY(-300%);
+  }
+  0.0001% {
+    transform: translateY(0);
+  }
+  33.3333333333% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-100%);
+  }
+  66.6666666667% {
+    transform: translateY(-100%);
+  }
+  73.3333333333% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(-200%);
+    opacity: 1;
+  }
+  106.6666666667% {
+    transform: translateY(-300%);
+    opacity: 0;
+  }
+}
