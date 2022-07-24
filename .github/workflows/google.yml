@@ -21,7 +21,6 @@ jobs:
         with:
           project_id: project-rekor
           install_components: alpha
-      # Setup OIDC->SA auth
       - uses: google-github-actions/auth@dafc92490a98acbdec38e6eb649f05d55e632447 # v0.7.2
         id: auth
         with:
@@ -41,9 +40,3 @@ jobs:
         run: |
           # download preprod bucket and copy over to production bucket
           gcloud alpha --quiet storage cp -r gs://sigstore-preprod-tuf-root/ .
-
-          # upload timestamp
-          gcloud alpha --quiet storage cp --cache-control=no-store -r sigstore-preprod-tuf-root/*timestamp.json gs://sigstore-tuf-root/
-
-          # delete any files present in sigstore-tuf-root not in sigstore-preprod-tuf-root
-          gcloud alpha --quiet storage cp -r gs://sigstore-tuf-root/ .
